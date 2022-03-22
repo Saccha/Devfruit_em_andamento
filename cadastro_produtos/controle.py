@@ -6,11 +6,11 @@ def funcao_principal():
     linha3 = formulario.lineEdit_3.text()
     
     if formulario.radioButton.isChecked() :
-        print("Categoria Eletronicos selecionada")
+        print("Categoria Legumes selecionada")
     elif formulario.radioButton_2.isChecked() :
-        print("Categoria Informatica selecionada")
+        print("Categoria Verduras selecionada")
     else :
-        print("Categoria Alimentos selecionada")
+        print("Categoria Frutas selecionada")
 
     print("Código:",linha1)
     print("Descricao:",linha2)
