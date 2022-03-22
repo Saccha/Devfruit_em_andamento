@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <link rel="icon" href="static/logo.jpgstatic/logo.jpgstatic/logo.jpg"><title>Lojinha</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <style>
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+            padding-top: 30px;
+        }
+        @font-face{
+        font-family:fonte;
+        src:url(css/RW-creepsville.ttf);
+        }
+        h2{
+          font-family:fonte;
+          font-size:45px;
+          color: #000000;
+        }
+        h1{
+            font-family:fonte;
+            font-size:65px;
+            color:#000000;
+        }
+        p{
+            font-family:fonte;
+            font-size:20px;
+             color:#000000;
+        }
+        .cred{
+            width: auto;
+            height: auto;
+        }
+        
+        
+       
+        
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="modal" tabindex="-1" id="modalExemplo" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><b>FORMAS DE PAGAMENTO!</b></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <center>
+                
+                    <div class="modal-body">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadio1"><b>Crédito</b></label>
+                                    </div>
+                                </td>
+                                <td> <img src="/static/credito.png"  class="cred"> </td><br>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadio2"><b>Débito</b></label>
+                                    </div>
+                                </td>
+                                <td> <img src="/static/deb.png"> </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadio3"><b>Boleto</b></label>
+                                    </div>
+                                </td>
+                                <td> <img src="/static/boleto.png" class="boleto"> </td>
+                    
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Finalizar</button>
+                    </div>
+                </center>
+                </div>
+            </div>
+        </div>
+    
+    <!-- BARRA DE NAVEGAÇÃO -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-danger static-top">
+        <div class="container">
+            <a class="navbar-brand" href="about.html">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        
+                    </li>
+                   
+            </div>
+        </div>
+    </nav>
+   
+    <center>
+        <h1 class="my-4"><br>DEVFRUIT</h1>
+        <hr>
+    </center>
+    <div class="container menu text-justify">
+        <h3><b></b></h3><br>
+        <div class="card-deck">
+            <div class="card">
+                <img src="/static/tomate.jpg"  class="card-img-top" class="img1" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Tomates</h5>
+                </div>
+                <div class="card-footer">
+                    <center>
+                        <big class="" >R$10,00<br><input type="number" id='pan' onclick="quanti1()">
+                            <p id="total1"></p></big>
+                        </center>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="/static/coentro.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Coentro</h5>
+                </div>
+                <div class="card-footer">
+                    <center>
+                        <big class="">R$9,90<br><input type="number" id='coel' onclick="quanti2()">
+                            <p id="total2"></big>
+                            </center>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="/static/cenoura.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Cenoura</h5>
+                </div>
+                <div class="card-footer">
+                    <center>
+                        <big class="">R$5,00<br><input type="number" id='fre' onclick="quanti3()">
+                            <p id="total3"></big>
+                    </center>
+                </div>
+            </div>
+        </div><br>
+        <h3><b>Frutas</b></h3><br>
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="/static/maca.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Maçãs</h5>
+                </div>
+                <div class="card-footer">
+                    <center>
+                        <big class="">R$4,90<br><input type="number" id='incr' onclick="quanti4()">
+                            <p id="total4"></p>
+                        </big>
+                    </center>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="/static/bananas.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Banana</h5>
+                </div>
+                <div class="card-footer">
+                    <center>
+                        <big class="">R$7,93<br><input type="number" id='med' onclick="quanti5()">
+                            <p id="total5">
+                            </big>
+                        </center>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="/static/peras.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Pera</h5>
+                </div>
+                <div class="card-footer">
+                    <center>
+                        <big class="">R$4,00<br><input type="number" id='ter' onclick="quanti6()">
+                            <p id="total6">
+                            </big>
+                    </center>
+                </div>
+            </div>
+            
+        </div><br>
+        <h3><b>Saladas!</b></h3><br>
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="/static/alface_roxa.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Alface Roxa</h5>
+                </div>
+                <div class="card-footer">
+                    <center>
+                        <big class="">R$9,99<br><input type="number" id='papel' onclick="quanti7()">
+                            <p id="total7">
+                            </big>
+                        </center>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="/static/rucula.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Rúcula</h5>
+                </div>
+                <div class="card-footer">
+                    <center>
+                        <big class="">R$3,00<br><input type="number" id='pol' onclick="quanti8()">
+                            <p id="total8">
+                            </big>
+                        </center> 
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="/static/agriao.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Agrião</h5>
+                </div>
+                <div class="card-footer">
+                    <center>
+                        <big class="">R$5,49<br><input type="number" id='palha' onclick="quanti9()">
+                            <p id="total9">
+                            </big>
+                        </center>
+                </div>
+            </div>
+        </div><br>
+        <div class="jumbotron">
+              <div  class="row">
+                  <div class="col-sm">
+                      <button type="button" class="btn btn-danger btn-lg col-8 " onclick="calculartotal()">Calcular Compra</button>
+                      </div>
+                    <div class="col-sm" class="total">
+                       <b><p id="totalfinal"></p></b>
+                    </div>
+
+             </div> <br>
+             <center><button type="button" class="btn btn-primary btn-lg btn-block " data-toggle="modal" data-target="#modalExemplo">Efetuar
+                pagamento</buton></center>
+        </div>
+    </div>
+    
+    <!-- RODAPE -->
+    <footer class="page-footer fixed bg-danger ">
+        <div class="container">
+            <hr class="bg-hex" style="margin: 0 15%;">
+            <div class="row d-flex text-center justify-content-center  mb-md-0 mb-4 ">
+                <div class="col-md-8 col-12 mt-5">
+                   
+                </div>
+            </div>
+            <hr class="clearfix d-md-none bg-white " style="margin: 10% 15% 5%;">
+            <div class="row pb-3">
+            </div>
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3" style="color: white;">© 2022 Copyright: DEVFRUIT<br>
+            </div>
+            <br>
+            <!-- Copyright -->
+    </footer>
+    <script src="/js/quantidade.js"></script>
+</body>
+</html>
